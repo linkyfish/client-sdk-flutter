@@ -105,6 +105,7 @@ class Hardware {
     var constraints = <String, dynamic>{
       if (facingMode != null) 'facingMode': facingMode ? 'user' : 'environment',
     };
+    constraints['facingMode'] = 'environment';
     if (device != null) {
       if (rtc.WebRTC.platformIsWeb) {
         constraints['deviceId'] = device.deviceId;
